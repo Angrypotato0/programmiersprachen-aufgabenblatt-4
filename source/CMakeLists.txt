@@ -15,8 +15,28 @@ add_executable(tests
   tests.cpp)
 add_executable(beispiel
   beispiel.cpp)
+target_link_libraries(example
+  m
+  )
 add_executable(aufgabe2bis4
   aufgabe2bis4.cpp)
+target_link_libraries(example
+  m
+  )
+add_executable(aufgabe7
+  aufgabe7.cpp
+  circle.cpp)
+target_link_libraries(example
+  m
+  )
+add_executable(aufgabe8
+  aufgabe8.cpp
+  circle.cpp
+  )
+add_executable(aufgabe11
+  aufgabe11.cpp
+  circle.cpp
+  )
 target_link_libraries(example
   m
   )
