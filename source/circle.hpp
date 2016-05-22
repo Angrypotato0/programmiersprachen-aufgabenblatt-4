@@ -1,6 +1,5 @@
 #ifndef CIRCLE_HPP
 #define CIRCLE_HPP
-#include "vec2.hpp"
 #include <cmath>
 
 class circle {

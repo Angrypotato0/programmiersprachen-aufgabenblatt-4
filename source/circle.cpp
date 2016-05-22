@@ -8,7 +8,7 @@ circle::circle():
 }
 	
 	
-circle::circle( float r_ ): 
+circle::circle( float r_ ):  
  r {r_} {
 
 	if (r_ == 0.0f) {

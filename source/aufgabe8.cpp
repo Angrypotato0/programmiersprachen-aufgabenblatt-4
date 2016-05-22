@@ -7,7 +7,7 @@
 #include <iostream>
 #include "circle.hpp"
 #include "swap.hpp"
-TEST_CASE("Template_swap", "[aufgabe8]") {
+TEST_CASE("Template_swap", "[aufgabe8]") { 
   int i1 = 42;
   int i2 = 14;
 

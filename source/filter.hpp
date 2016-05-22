@@ -2,7 +2,7 @@
 #define FILTER_HPP
 #include <vector>
 
-template <typename Function, typename Container>
+template <typename Function, typename Container> 
   Container filter (Container const& c, Function const& f) {
   	Container result;
 

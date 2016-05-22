@@ -8,7 +8,7 @@
 #include <iterator> 
 #include "circle.hpp"
 
-float RandomNumber () { return (std::rand()%101); }
+float RandomNumber () { return (std::rand()%101); } 
 bool is_even(unsigned int x){
 	if (x%2 == 0){
 		return true;

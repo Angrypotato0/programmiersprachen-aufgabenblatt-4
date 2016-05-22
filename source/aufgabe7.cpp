@@ -9,7 +9,7 @@
 #include "circle.hpp"
 #include <list>
 
-TEST_CASE("Circle_Order", "[aufgabe7]"){
+TEST_CASE("Circle_Order", "[aufgabe7]"){ 
 std::vector<circle> lC(6);
 int j;
 circle temp;

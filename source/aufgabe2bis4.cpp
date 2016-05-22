@@ -6,7 +6,7 @@
 #include <algorithm>
 #include <set>
 #include <map>
-int RandomNumber () { return (std::rand()%101); }
+int RandomNumber () { return (std::rand()%101); } 
 int main()
 {
     

@@ -7,7 +7,7 @@
 #include <iostream>
 #include "filter.hpp"
 int RandomNumber () { return (std::rand()%101); }
-bool is_even(unsigned int x){
+bool is_even(unsigned int x){ 
 	if (x%2 == 0){
 		return true;
 	}
@@ -22,7 +22,7 @@ bool is_odd(unsigned int x){
 	else{
 		return false;
 	}
-}
+} 
 TEST_CASE("filter", "[Aufgabe11]") {
   std::vector<int> v(100);
   std::generate(std::begin(v),std::end(v),RandomNumber); 
