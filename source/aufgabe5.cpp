@@ -35,19 +35,17 @@ std::cout<<std::endl;
 REQUIRE(std::all_of(v.begin(),v.end(),is_even));
 }
 
-/*TEST_CASE("sortLambda", "[aufgabe9]") {
-  std::vector<circle> c(2);
-  c[0]= { 5.2};
-  c[1]= { 4.2};
+TEST_CASE("sortLambda", "[aufgabe9]") {
+  std::vector<circle> c(10);
 
   for (int i=0; i<10; ++i) {
     c[i].set_radius(RandomNumber());
   }
-  auto func = [](circle const& c1, circle const& c2) {return (c1.get_radius() < c2.get_radius());};
+  auto func = [](circle const& c1, circle const& c2) {return (c1 < c2);};
   std::sort(std::begin(c), std::end(c),func);
 
   REQUIRE(std::is_sorted(std::begin(c), std::end(c)));
-}*/
+}
 TEST_CASE("describe_ContainerAdd", "[Aufgabe10]") {
   std::vector<int> v1 {1,2,3,4,5,6,7,8,9}; 
   std::vector<int> v2 {9,8,7,6,5,4,3,2,1}; 

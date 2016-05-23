@@ -15,9 +15,9 @@ public:
 	float get_circumference() const;
 	void set_radius(float r_); 
 	float get_radius() const; 
-	bool operator == (circle const& x) const;
-	bool operator < (circle const& x) const;
-	bool operator > (circle const& x) const;
+	friend bool operator==(circle const& lhs, circle const& rhs);
+	friend bool operator<(circle const& lhs, circle const& rhs);
+	friend bool operator>(circle const& lhs, circle const& rhs);
 
 	
 	

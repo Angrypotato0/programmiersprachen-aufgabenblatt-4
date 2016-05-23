@@ -59,18 +59,18 @@ float circle::get_radius() const {
 	
 	
 
-bool circle::operator == (circle const& x) const {
-	return r == x.r;
+bool operator==(circle const& lhs, circle const& rhs) {
+	return lhs.get_radius() == rhs.get_radius();
 }
 
 	
-bool circle::operator < (circle const& x) const {
-	return r < x.r;
+bool operator<(circle const& lhs, circle const& rhs) {
+	return lhs.get_radius() < rhs.get_radius();
 }
 
 
-bool circle::operator > (circle const& x) const {
-	return r > x.r;
+bool operator>(circle const& lhs, circle const& rhs) {
+	return lhs.get_radius() > rhs.get_radius();
 } 
 	
 
