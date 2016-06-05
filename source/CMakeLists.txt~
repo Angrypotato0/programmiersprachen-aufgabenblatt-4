@@ -3,9 +3,6 @@
 # Build tests
 add_executable(beispiel
   beispiel.cpp)
-target_link_libraries(example
-  m
-  )
 add_executable(aufgabe2bis4
   aufgabe2bis4.cpp)
 add_executable(aufgabe7
