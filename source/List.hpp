@@ -67,7 +67,7 @@ struct ListIterator
   } 
 
     
-  bool operator == (const Self& x) const {
+  bool operator == (const Self& x) const { 
     return m_node == x.m_node;
   } 
 

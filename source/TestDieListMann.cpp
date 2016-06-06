@@ -8,18 +8,18 @@
 
 
 
-TEST_CASE("aufgabe4.1", "[aufgabe4.1]") {
+TEST_CASE("Construktor", "[aufgabe4.1]") {
   List<int> list1 {};
   REQUIRE(list1.empty() == true);
 }
 
-TEST_CASE("aufgabe4.1", "[aufgabe4.1]") {
+TEST_CASE("size überprüfen", "[aufgabe4.1]") {
   List<int> list1 {};
   REQUIRE(list1.size() == 0);
 }
 
 
-TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
+TEST_CASE("push_front", "[aufgabe4.2]") {
   List<int> list; 
   list.push_front(42); 
   REQUIRE(42 == list.front() );
@@ -38,7 +38,7 @@ TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
   REQUIRE(20 == list3.front());
 } 
 
-TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
+TEST_CASE("push_back", "[aufgabe4.2]") {
   List<int> list {}; 
   list.push_back(42); 
   REQUIRE(42 == list.last());
@@ -57,7 +57,7 @@ TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
   REQUIRE(69 == list3.last());
 } 
 
-TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
+TEST_CASE("pop_front", "[aufgabe4.2]") {
   List<int> list {}; 
   list.push_back(42); 
   list.pop_front();
@@ -79,7 +79,7 @@ TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
   REQUIRE(98 == list2.front());
 } 
 
-TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
+TEST_CASE("pop_back", "[aufgabe4.2]") {
   List<int> list {}; 
   list.push_back(42); 
   list.pop_back();
@@ -100,7 +100,7 @@ TEST_CASE("aufgabe4.2", "[aufgabe4.2]") {
   REQUIRE(74 == list2.last());
 } 
 
-TEST_CASE("aufgabe4.3", "[aufgabe4.3]") {
+TEST_CASE("clear", "[aufgabe4.3]") {
   List<int> list; 
   list.push_front(1); 
   list.push_front(2); 
@@ -123,14 +123,14 @@ TEST_CASE("aufgabe4.3", "[aufgabe4.3]") {
 }
 
 
-TEST_CASE("aufgabe4.5", "[aufgabe4.5]") {
+TEST_CASE("begin and end", "[aufgabe4.5]") {
   List<int> list;
   auto b = list.begin(); 
   auto e = list.end(); 
   REQUIRE(b == e);
 }
 
-TEST_CASE("aufgabe4.5", "[aufgabe4.5]") {
+TEST_CASE("pointer begin", "[aufgabe4.5]") {
   List<int> list; 
   list.push_front(42); 
   REQUIRE(42 == *list.begin());
@@ -143,7 +143,7 @@ TEST_CASE("aufgabe4.5", "[aufgabe4.5]") {
   REQUIRE(69 == *list1.begin());
 }
 
-TEST_CASE("aufgabe4.6", "[aufgabe4.6]") {
+TEST_CASE("2 Listen vergleichen ==", "[aufgabe4.6]") {
   List<int> list1 {};
   list1.push_back(42); 
   list1.push_back(69);
@@ -175,7 +175,7 @@ TEST_CASE("aufgabe4.6", "[aufgabe4.6]") {
   REQUIRE(list5 == list6);
 }
 
-TEST_CASE("aufgabe4.6", "[aufgabe4.6]") {
+TEST_CASE("2 listen vergleichen !=", "[aufgabe4.6]") {
   List<int> list1 {};
   list1.push_back(42); 
   list1.push_back(69);
@@ -209,7 +209,7 @@ TEST_CASE("aufgabe4.6", "[aufgabe4.6]") {
   REQUIRE(list5 != list6);
 }
 
-TEST_CASE("aufgabe4.7", "[aufgabe4.7]") {
+TEST_CASE("Liste übergeben", "[aufgabe4.7]") {
   List<int> list; 
   list.push_front(1); 
   list.push_front(2); 
@@ -228,7 +228,7 @@ TEST_CASE("aufgabe4.7", "[aufgabe4.7]") {
   REQUIRE(list1 == list2);
 }
 
-TEST_CASE("aufgabe4.8", "[aufgabe4.8]") {
+TEST_CASE("insert", "[aufgabe4.8]") {
   List<int> list; 
   list.push_front(69); 
   list.push_front(42); 
@@ -246,10 +246,10 @@ TEST_CASE("aufgabe4.8", "[aufgabe4.8]") {
   list2.push_front(101); 
   list2.push_front(264); 
   list2.push_front(9); 
-  list2.insert(list2.end(), 13);
+  list2.insert(list2.end(), 69);
   REQUIRE(6 == list2.size());
   REQUIRE(9 == list2.front());
-  REQUIRE(13 == list2.last());
+  REQUIRE(69 == list2.last());
 
   List<int> list3; 
   list3.push_front(69); 
@@ -275,7 +275,7 @@ TEST_CASE("aufgabe4.8", "[aufgabe4.8]") {
   REQUIRE(13 == *it); 
 }
 
-TEST_CASE("aufgabe4.9", "[aufgabe4.9]") {
+TEST_CASE("ListIterator", "[aufgabe4.9]") {
     
   List<int> list; 
   list.push_back(1); 
@@ -310,24 +310,24 @@ TEST_CASE("aufgabe4.9", "[aufgabe4.9]") {
 
 }
 
-TEST_CASE("aufgabe4.10", "[aufgabe4.10]") {
+TEST_CASE("vektor übergabe", "[aufgabe4.10]") {
   List<int> list; 
   list.push_back(1); 
   list.push_back(2); 
   list.push_back(3); 
   list.push_back(4); 
   list.push_back(5);
-  std::vector<unsigned int> viktor(list.size());
-  std::copy(list.begin(), list.end(), std::begin(viktor));
+  std::vector<unsigned int> v1(list.size());
+  std::copy(list.begin(), list.end(), std::begin(v1));
   
-  REQUIRE(1 == viktor[0]);
-  REQUIRE(2 == viktor[1]);
-  REQUIRE(3 == viktor[2]);
-  REQUIRE(4 == viktor[3]);
-  REQUIRE(5 == viktor[4]);
+  REQUIRE(1 == v1[0]);
+  REQUIRE(2 == v1[1]);
+  REQUIRE(3 == v1[2]);
+  REQUIRE(4 == v1[3]);
+  REQUIRE(5 == v1[4]);
 }
 
-TEST_CASE("aufgabe4.11", "[aufgabe4.11]") {
+TEST_CASE("übergeben und ListIterator", "[aufgabe4.11]") {
     
   List<int> list1 {}; 
   list1.push_back(1); 
@@ -417,17 +417,21 @@ TEST_CASE("aufgabe4.11", "[aufgabe4.11]") {
 
 }
 
-TEST_CASE("aufgabe4.12", "[aufgabe4.12]") {
+TEST_CASE("Destruktor + Moves", "[aufgabe4.12]") {
   List<int> list;
   list.push_front(1);
   list.push_front(2);
   list.push_front(3);
   list.push_front(4);
+  list.push_front(5);
+  list.push_front(6);
+  list.push_front(7);
+
 
   List<int> list2(std::move(list));
   REQUIRE(0 == list.size());
   REQUIRE(list.empty());
-  REQUIRE(4 == list2.size());
+  REQUIRE(7 == list2.size());
 }
 
 
